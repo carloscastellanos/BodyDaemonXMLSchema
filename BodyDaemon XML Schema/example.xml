@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <bodydml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> -->
+<bodydml status="success"> <!-- success or failure -->
+<livedata>
+    <sensor type="GSR" value="202">
+        <serverprop type="timeout">10000</serverprop>
+    </sensor>
+    <sensor type="ECG" value="547">
+        <serverprop type="maxsockets">5</serverprop>
+    </sensor>
+    <sensor type="avg" value="113">
+        <serverprop type="powerlevel">0.1600431</serverprop>
+    </sensor>
+</livedata>
+
+<history>
+    <data time="26-Apr-05 11:52:26">
+        <sensor type="GSR" value="202">
+            <serverprop type="timeout">10000</serverprop>
+        </sensor>
+    </data>
+    <data time="26-Apr-05 11:52:31">
+        <sensor type="GSR" value="914">
+            <serverprop type="timeout">10</serverprop>
+        </sensor>
+    </data>
+</history>
+
+<!-- all sensors -->
+<!-- from client -->
+<bodydml requesttype="custom"><history count="2" sensor="all" interval="5s"/></bodydml> <!-- custom or default -->
+<!-- server response -->
+<history>
+    <data time="16-Jun-02 12:32:54">
+        <sensor type="GSR" value="112">
+            <serverprop type="powerlevel">0.1600429</serverprop>
+        </sensor>
+        <sensor type="ECG" value="698">
+            <serverprop type="maxsockets">6</serverprop>
+        </sensor>
+        <sensor type="EMG" value="588">
+            <serverprop type="numsockets">5</serverprop>
+        </sensor>
+        <sensor type="Respiration" value="126">
+            <serverprop type="datarate">19</serverprop>
+        </sensor>
+    </data>
+    <data time="16-Jun-02 12:32:54">
+        <sensor type="GSR" value="113">
+            <serverprop type="powerlevel">0.1600432</serverprop>
+        </sensor>
+        <sensor type="ECG" value="698">
+            <serverprop type="maxsockets">6</serverprop>
+        </sensor>
+        <sensor type="EMG" value="179">
+            <serverprop type="numsockets">1</serverprop>
+        </sensor>
+        <sensor type="Respiration" value="112">
+            <serverprop type="datarate">15</serverprop>
+        </sensor>
+    </data>
+</history>
+
+<bodydml status="fail">
+</bodydml>
+
+<bodydml requesttype="default"></bodydml>
+
+
+</bodydml>
